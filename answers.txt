@@ -1,0 +1,54 @@
+1. What is a gitignore file and what should it include for a Java project?
+    .gitignore file is a text file which contains a list of all the folders and files 
+that git will ignore while tracking changes in files. For example node_modules is very 
+large in size and we should not commit node_modules to remote repository .
+
+For Java project,example of .gitignore file here:
+## Java
+.mtj.tmp/
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+hs_err_pid*
+
+## IntelliJ
+out/
+.idea/
+.idea_modules/
+*.iml
+*.ipr
+*.iws
+
+## OS X
+.DS_Store
+
+-----------------------------------------------------------------------------------------
+
+2.  What does fast-forward in git mean?
+fast-forward in git means it will move master branch HEAD to the end of feature branch. 
+
+-----------------------------------------------------------------------------------------
+
+3  Why should you have different branches?
+Different branches allow developers to isolate themselves from the master branch. It will allow the developer 
+to commit their changes independently to their feature branch, and later on, they can raise PR
+against a master branch, and if it has a conflict with the master branch, they can resolve it. This
+way master branch will have all the features from the developer, and we can easily manage to work
+on the same project with a large number of developers in a team.
+
+------------------------------------------------------------------------------------------
+
+4 In a project how many remote Git repositories do you usually have?
+In a project, everyone involes in development should fork the repositories so that 
+they are working on their own forked repositories for upcoming features.
+After developing new feature, developer can raise PR from their forked repositories to 
+production/remote repository so that their changes are pushed to the production/remote
+repository. 
+Also, repositories should be team-wise as well. If there are multiple teams working on same 
+feature then multiple repository easily devide ownerships to the features for future 
+maintainance.
+So there will be at least two repositories in a project one for fronend, one for backend atleast.
+If there are multiple teams on frontend then multiple repositories for fronend for each team
+and same for backend as well.
